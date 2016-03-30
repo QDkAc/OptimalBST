@@ -1,15 +1,12 @@
 import random
-def gen_traversal(o_file, l, r):
+def generate(n):
+	return gen_traversal(0, n - 1)
+def gen_traversal(l, r):
 	if l >= r:
-		return
-	print l, r
+		return []
 	m = random.randint(l, r - 1)
-	print >> o_file, m, 
-	gen_traversal(o_file, l, m)
-	gen_traversal(o_file, m + 1, r)
+	ret = [m] 
+	ret = ret + gen_traversal(l, m)
+	ret = ret + gen_traversal(m + 1, r)
+	return ret
 
-output_file = open("input.txt", "w")
-
-gen_traversal(output_file, 0, 80)
-
-output_file.close()

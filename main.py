@@ -2,9 +2,11 @@ import matplotlib.pyplot as plt
 import random
 import sequential
 import greedyASS
+import path
+import traversal
 
-n = 100
-access_sequence = sequential.generate(n)
+n = 10
+access_sequence = traversal.generate(n)
 #n = 10
 #access_sequence = [7, 0, 6, 3, 5, 2, 9, 8, 1, 4]
 algorithm = greedyASS.greedyASS(n)
