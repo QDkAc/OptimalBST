@@ -5,7 +5,9 @@ import greedyASS
 
 n = 100
 access_sequence = sequential.generate(n)
-algorithm = testBST.testBST(n)
+#n = 10
+#access_sequence = [7, 0, 6, 3, 5, 2, 9, 8, 1, 4]
+algorithm = greedyASS.greedyASS(n)
 
 for i in xrange(len(access_sequence)):
 	touch_points = algorithm.access(access_sequence[i])
@@ -14,5 +16,6 @@ for i in xrange(len(access_sequence)):
 		if p != access_sequence[i]:	
 			plt.plot([p], [i], marker = "o", color = "b")
 
+plt.axis([-1, n + 2, -1, n + 2])
 plt.show()
 
