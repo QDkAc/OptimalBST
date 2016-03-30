@@ -1,6 +1,6 @@
 import random
 def generate(n):
-	return gen_traversal(0, n - 1)
+	return gen_traversal(0, n)
 def gen_traversal(l, r):
 	if l >= r:
 		return []

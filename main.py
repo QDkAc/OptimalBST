@@ -6,10 +6,10 @@ import path
 import traversal
 import splay
 
-n = 10
-#access_sequence = traversal.generate(n)
+n = 50
+access_sequence = path.generate(n)
 #n = 10
-access_sequence = [7, 0, 6, 3, 5, 2, 9, 8, 1, 4]
+#access_sequence = [7, 0, 6, 3, 5, 2, 9, 8, 1, 4]
 algorithm = splay.Splay(range(n))
 
 for i in range(len(access_sequence)):
