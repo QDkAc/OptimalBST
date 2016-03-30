@@ -35,7 +35,7 @@ class Splay:
 		while node.p != aim:
 			if node.p == top:
 				node.rotate(top.c[1] == node)
-				step.append(node.key)
+				step.append(top.key)
 				continue
 			p = node.p
 			pp = node.p.p
